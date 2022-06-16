@@ -1,0 +1,24 @@
+.hola {
+    float: left;
+}
+
+.title {
+    margin-right: 10px;
+}
+
+.card-order {
+    float: left;
+}
+
+img {
+    max-height: 400px;
+}
+
+.description {
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.container {
+    padding-top: 20px;
+}

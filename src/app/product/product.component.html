@@ -1,0 +1,42 @@
+<h2>Gestor de producto</h2>
+<div class="content row">
+    <div class="grid-container mat-elevation-z8 col-11">
+        <table mat-table [dataSource]="dataSource" class="crud-table table-dev" multiTemplateDataRows>
+            <ng-container matColumnDef="{{template}}" *ngFor="let template of displayedColumnsconst">
+                <th mat-header-cell *matHeaderCellDef>
+                    {{template}}
+                </th>
+                <td mat-cell *matCellDef="let item">
+                    <span>{{getValue(item, template)}}</span>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item; let i = dataIndex" class="text-center">
+                    <div class="btn-group btn-actions">
+                        <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-edit d-xl-none"></i>
+              <span class="" d-none d-xl-block (click)="onRowEdited(item, i)">
+                <i class="fa fa-edit"></i>&nbsp;editar
+              </span>
+            </button>
+                        <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteRecord(item)">
+              <i class="fa fa-trash d-xl-none"></i>
+              <span class="" d-none d-xl-block>
+                <i class="fa fa-trash"></i>&nbsp;borrar
+              </span>
+            </button>
+                    </div>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = dataIndex" class="inner-element-row mat-row-auth" [ngClass]="{'odd': isOdd(i)}"></tr>
+        </table>
+    </div>
+    <div class="content-vertical-bar col-1">
+        <button type="button" class="btn btn-outline-secondary" matTooltip="Nuevo" (click)="onNewRecord()">
+      <i class="fa fa-file"></i>
+    </button>
+    </div>
+
+</div>

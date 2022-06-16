@@ -1,0 +1,50 @@
+.hola {
+    float: left;
+}
+
+.title {
+    margin-right: 10px;
+    margin-top: 2.5px;
+}
+
+.card-order {
+    float: left;
+}
+
+img {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.separator {
+    width: 10px;
+}
+
+.define-max {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.description {
+    height: 100px;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+header {
+    padding-top: -40px;
+}
+
+.header-search {
+    padding-bottom: 30px;
+    margin-top: -40px;
+}

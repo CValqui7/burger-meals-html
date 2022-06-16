@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 p-2" *ngFor="let product of productList">
+            <div class="card card-order">
+                <div class="define-max">
+                    <img src="{{ product.image }}" class="card-img-top" />
+                </div>
+
+                <div class="card-header bg-light text-primary">
+                    <div class="title">
+                        <h4 class="title text-left">{{ product.name }}</h4>
+                    </div>
+
+                </div>
+
+                <div class="card-body  bg-outline-info text-secundary">
+                    <div class="description">
+                        <p>{{ product.description }}</p>&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                    <div class="text-left">
+
+                        <button class="btn btn-primary float-right" (click)="addBuy(product)">
+              Agregar al carrito
+              <fa-icon [icon]="plusCircle"></fa-icon>
+            </button>
+                    </div>
+                    <div>
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <h3 class="text-primary">S/. {{ product.precio }}</h3>
+                            <div class="separator"></div>
+                            <h6 class="text-muted"> desc. {{ product.descuento }} %</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
